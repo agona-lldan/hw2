@@ -1,97 +1,325 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+$black: #282828;
+$white: #fff;
+$gray: #5f6980;
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
 a:hover {
-  color: #535bf2;
+  text-decoration: none;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+ul,
+ul li {
+  list-style: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+img {
+  vertical-align: top;
 }
 
-.card {
-  padding: 2em;
+img,
+svg {
+  max-width: 100%;
+  height: auto;
 }
 
-.read-the-docs {
-  color: #888;
+address {
+  font-style: normal;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+/* Form */
+
+input,
+textarea,
+button,
+select {
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type='submit'] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+.header {
+  padding: 16px 52px;
+  display: flex;
+  justify-content: space-between;
+  &__nav {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
   }
-  a:hover {
-    color: #747bff;
+  &__nav-item {
+    color: $black;
+    position: relative;
+    background-image: linear-gradient($black, $black);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+    font-size: 14px;
+    font-weight: 600;
+    &:hover {
+      color: $black;
+      background-size: 100% 2px;
+    }
   }
-  button {
-    background-color: #f9f9f9;
+  &__icons {
+    display: flex;
+    gap: 20px;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  &__icon-count {
+    width: 20px;
+    height: 20px;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+}
+
+.top {
+  &__slide {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
+    width: 600px;
+    padding: 0 82px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: $black;
+    align-items: flex-start;
+  }
+  &__additional {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  &__title {
+    font-size: 54px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+  &__link {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    color: $black;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      height: 2px;
+      width: 100%;
+      background-color: $black;
+    }
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50%;
+  background: $white;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.06);
+}
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 32px !important;
+  height: 32px !important;
+}
+.swiper-button-prev {
+  left: 52px;
+}
+.swiper-button-next {
+  right: 52px;
+}
+
+.logos {
+  padding: 52px;
+  &__swiper {
+    border-top: 1px solid #d0d5dd;
+    border-bottom: 1px solid #d0d5dd;
+    padding: 56px 100px !important;
+  }
+}
+
+.banner {
+  display: flex;
+  padding: 52px;
+  gap: 32px;
+  justify-content: center;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    color: $gray;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black;
+  }
+}
+
+.timer {
+  display: flex;
+  padding: 52px;
+  justify-content: space-between;
+  &__right {
+    display: flex;
+    gap: 32px;
+    padding-left: 114px;
+    justify-content: center;
+    flex-direction: column;
+    color: $black;
+    align-items: flex-start;
+    width: 600px;
+  }
+  &__additional {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__title {
+    font-size: 54px;
+    font-weight: 600;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__date {
+    font-size: 34px;
+    font-weight: 600;
+  }
+  &__btn {
+    padding: 10px 24px;
+    background-color: $black;
+    color: $white;
+    font-size: 18px;
+    font-weight: 600;
   }
 }
