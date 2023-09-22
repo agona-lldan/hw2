@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>HW2</title>
   </head>
   <body>
@@ -131,25 +132,25 @@
           <div class="swiper logos__swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos1.png" alt="logos">
+                <img src="/logos/logos1.png" alt="logos" />
               </div>
               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos2.png" alt="logos">
-              </div>             
-               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos3.png" alt="logos">
-              </div>              
+                <img src="/logos/logos2.png" alt="logos" />
+              </div>
               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos4.png" alt="logos">
-              </div>              
+                <img src="/logos/logos3.png" alt="logos" />
+              </div>
               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos5.png" alt="logos">
-              </div>              
+                <img src="/logos/logos4.png" alt="logos" />
+              </div>
               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos6.png" alt="logos">
-              </div>              
+                <img src="/logos/logos5.png" alt="logos" />
+              </div>
               <div class="swiper-slide logos__slide">
-                <img src="/logos/logos1.png" alt="logos">
+                <img src="/logos/logos6.png" alt="logos" />
+              </div>
+              <div class="swiper-slide logos__slide">
+                <img src="/logos/logos1.png" alt="logos" />
               </div>
             </div>
             <div class="swiper-button-prev">
@@ -216,23 +217,24 @@
             </div>
           </div>
         </section>
+
         <section class="banner">
           <div class="banner__item">
-            <img src="/banner/banner1.png" alt="banner image" class="banner__img">
+            <img src="/banner/banner1.png" alt="banner image" class="banner__img" />
             <div class="banner__info">
               <p class="banner__description">Featured</p>
               <p class="banner__title">Nairo Series®</p>
             </div>
           </div>
           <div class="banner__item">
-            <img src="/banner/banner2.png" alt="banner image" class="banner__img">
+            <img src="/banner/banner2.png" alt="banner image" class="banner__img" />
             <div class="banner__info">
               <p class="banner__description">New</p>
               <p class="banner__title">Kensho Series®</p>
             </div>
           </div>
           <div class="banner__item">
-            <img src="/banner/banner3.png" alt="banner image" class="banner__img">
+            <img src="/banner/banner3.png" alt="banner image" class="banner__img" />
             <div class="banner__info">
               <p class="banner__description">Handmade</p>
               <p class="banner__title">Atarashi Series®</p>
@@ -240,23 +242,113 @@
           </div>
         </section>
         <section class="timer">
-          <img src="/timer.png" alt="timer" class="timer__img">
+          <img src="/timer.png" alt="timer" class="timer__img" />
           <div class="timer__right">
             <p class="timer__additional">EXCLUSIVE</p>
             <h2 class="timer__title">50% OFF</h2>
-            <p class="timer__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+            <p class="timer__description">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            </p>
             <p class="timer__date">
-              <span class="timer__day">00</span>d:<span class="timer__hour">00</span>h:<span class="timer__minute">00</span>m:<span class="timer__sec">00</span>s
+              <span class="timer__day">00</span>d:<span class="timer__hour">00</span>h:<span
+                class="timer__minute"
+                >00</span
+              >m:<span class="timer__sec">00</span>s
             </p>
             <button class="timer__btn">Shop Now</button>
           </div>
         </section>
-      </main>
-      
-      <footer class="footer">
-        123
-      </footer>
+        <section class="newsletter">
+          <div class="newsletter__wrapper">
+            <div class="newsletter__info">
+              <h2 class="newsletter__title">Join our newsletter</h2>
+              <p class="newsletter__description">
+                Enjoy big discounts and latest updates right to your inbox.
+              </p>
+            </div>
+            <form class="newsletter__form">
+              <label for="email" class="newsletter__form-label">
+                <img src="/email.svg" alt="email" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email address"
+                  class="newsletter__form-input"
+                />
+                <button type="submit" class="newsletter__form-btn">Signup</button>
+              </label>
+            </form>
+          </div>
+        </section>
+        <section class="engage">
+          <div class="engage__wrapper">
+            <div class="engage__info">
+              <h2 class="engage__title">Exquisite Craftsmanship</h2>
+              <p class="engage__description">
+                Phosfluor escently engage worldwide methodologies with web-enabled process-centric
+                technology.
+              </p>
+            </div>
 
+            <a href="#" class="engage__link">Learn more</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <img src="/logo.svg" class="footer__logo" />
+            <div class="footer__description">
+              Phosf luorescently engage worldwide method process shopping.
+            </div>
+            <div class="footer__socials">
+              <div class="footer__socials-item"><img src="/socials/email.svg" alt="" /></div>
+              <div class="footer__socials-item"><img src="/socials/facebook.svg" alt="" /></div>
+              <div class="footer__socials-item"><img src="/socials/instagram.svg" alt="" /></div>
+              <div class="footer__socials-item"><img src="/socials/twitter.svg" alt="" /></div>
+            </div>
+          </div>
+          <div class="footer__top-right">
+            <div class="footer__right-item">
+              <div class="footer__subtitle">Product</div>
+              <a href="#" class="footer__link">Learn</a>
+              <a href="#" class="footer__link">Plugins</a>
+              <a href="#" class="footer__link">Gallery</a>
+              <a href="#" class="footer__link">Pricing</a>
+            </div>
+            <div class="footer__right-item">
+              <div class="footer__subtitle">Information</div>
+              <a href="#" class="footer__link">Privacy</a>
+              <a href="#" class="footer__link">Cookies</a>
+              <a href="#" class="footer__link">Terms</a>
+              <a href="#" class="footer__link">Security</a>
+            </div>
+            <div class="footer__right-item">
+              <div class="footer__subtitle">Support</div>
+              <a href="#" class="footer__link">Updates</a>
+              <a href="#" class="footer__link">Discord</a>
+              <a href="#" class="footer__link">Startups</a>
+              <a href="#" class="footer__link">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">© 2088 Nayzak Design</p>
+          <div class="footer__selects">
+            <div class="footer__select">
+              <img src="/usa.svg" alt="flag" />
+              <p class="footer__text">English</p>
+              <img src="/chevron.svg" alt="chevron" />
+            </div>
+            <div class="footer__select">
+              <p class="footer__text">USD</p>
+              <img src="/chevron.svg" alt="chevron" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

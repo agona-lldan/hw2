@@ -3,9 +3,8 @@ import './style.scss';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import { SwiperOptions } from 'swiper/types';
-import 'swiper/css';
-import 'swiper/css/navigation';
 const swiperParams1: SwiperOptions = {
+  loop: true,
   modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',
@@ -15,11 +14,28 @@ const swiperParams1: SwiperOptions = {
 
 const swiperParams2: SwiperOptions = {
   slidesPerView: 6,
-
+  loop: true,
   modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+    },
+    475: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 4,
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 6,
+    },
   },
 };
 
