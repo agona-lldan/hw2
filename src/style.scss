@@ -220,7 +220,12 @@ body {
     }
   }
 }
-
+.menu-btn {
+  display: none;
+}
+.menu {
+  display: none;
+}
 .swiper-button-prev:after,
 .swiper-button-next:after {
   display: none;
@@ -485,4 +490,282 @@ body {
 
 .logos-mobile {
   display: none;
+}
+
+@media (max-width: 1200px) {
+  .top {
+    &__right {
+      padding: 0 40px;
+    }
+  }
+  .timer {
+    &__right {
+      padding-left: 40px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .top {
+    &__slide {
+      flex-direction: column;
+      gap: 40px;
+    }
+    &__right {
+      width: auto;
+      padding: 0;
+      align-items: center;
+    }
+    &__description {
+      margin-bottom: 10px;
+    }
+  }
+  .swiper-button-next {
+    right: 20px;
+  }
+  .swiper-button-prev {
+    left: 20px;
+  }
+  .timer {
+    flex-direction: column;
+    gap: 40px;
+    &__right {
+      padding: 0;
+      width: 100%;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    &__top-right {
+      gap: 120px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .top {
+    &__title {
+      font-size: 40px;
+    }
+    &__description {
+      text-align: center;
+    }
+    &__right {
+      padding: 10px;
+    }
+  }
+  .timer {
+    &__description {
+      text-align: center;
+    }
+    &__title {
+      font-size: 40px;
+    }
+  }
+  .header {
+    &__nav {
+      gap: 10px;
+    }
+    &__icons {
+      gap: 10px;
+    }
+    padding: 10px;
+  }
+  .logos {
+    padding: 10px;
+  }
+  .banner {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .timer {
+    padding: 10px;
+  }
+  .newsletter {
+    padding: 10px;
+  }
+  .engage {
+    padding: 10px;
+  }
+  .footer {
+    padding: 10px;
+    &__top-left {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__icons {
+      align-items: center;
+    }
+    &__icon {
+      display: none;
+    }
+    &__nav {
+      display: none;
+    }
+    &__icon-cart {
+      display: flex;
+    }
+  }
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: $white;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+    z-index: 12;
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    &__nav-item {
+      color: $black;
+    }
+  }
+  .menu-btn.active span:nth-of-type(1) {
+    display: none;
+  }
+  .menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  .menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+  .menu.active {
+    transform: translateX(0);
+  }
+  .menu li {
+    list-style-type: none;
+  }
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 13;
+    overflow: hidden;
+    display: block;
+  }
+  .menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+  }
+  .menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+  }
+  .menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+  }
+  .top {
+    &__title {
+      text-align: center;
+    }
+  }
+  .newsletter {
+    &__form {
+      width: auto;
+    }
+    &__wrapper {
+      padding: 10px;
+    }
+    &__description {
+      text-align: center;
+    }
+  }
+  .engage {
+    &__wrapper {
+      padding: 10px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__description {
+      text-align: center;
+    }
+    &__info {
+      width: auto;
+    }
+  }
+  .footer {
+    &__description {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .logos {
+    display: none;
+  }
+  .newsletter {
+    &__title {
+      text-align: center;
+      font-size: 20px;
+    }
+    &__form {
+      padding: 5px 0;
+    }
+  }
+  .engage {
+    &__title {
+      text-align: center;
+    }
+  }
+  .footer {
+    &__top-right {
+      gap: 20px;
+    }
+    &__bottom {
+      padding-top: 10px;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    gap: 20px;
+  }
+  .top {
+    &__slide {
+      gap: 20px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+    &__additional {
+      font-size: 14px;
+    }
+  }
+  .timer {
+    gap: 20px;
+    &__date {
+      font-size: 20px;
+    }
+  }
 }

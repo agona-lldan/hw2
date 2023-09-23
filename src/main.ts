@@ -14,27 +14,24 @@ const swiperParams1: SwiperOptions = {
 
 const swiperParams2: SwiperOptions = {
   slidesPerView: 6,
-  loop: true,
+
   modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    // when window width is >= 320px
-    320: {
+    500: {
       slidesPerView: 2,
     },
-    475: {
+    700: {
       slidesPerView: 3,
     },
-    // when window width is >= 480px
-    768: {
+    900: {
       slidesPerView: 4,
     },
-    // when window width is >= 640px
-    1024: {
-      slidesPerView: 6,
+    1100: {
+      slidesPerView: 5,
     },
   },
 };
@@ -71,3 +68,10 @@ timer();
 setInterval(() => {
   timer();
 }, 1000);
+
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu');
+menuBtn?.addEventListener('click', function () {
+  menuBtn?.classList.toggle('active');
+  menu?.classList.toggle('active');
+});
