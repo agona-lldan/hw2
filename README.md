@@ -1,7 +1,7 @@
 # строго без тильта
 
 с 50035485435 попытки залил на github pages
-https://github.com/lld4n/agona-hw2
+https://lld4n.github.io/agona-hw2/
 
 если будете копировать себе репозиторий, то его можно запустить с помощью команд  
 `yarn`  
